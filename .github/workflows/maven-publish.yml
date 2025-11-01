@@ -38,7 +38,7 @@ jobs:
     - name: Upload artifact (JAR) to GitHub Actions
       uses: actions/upload-artifact@v4
       with:
-        name: drugs-plugin.jar
+        name: DrugsPlugin.jar
         path: target/*.jar  # Adjust if your JAR name differs
 
     # Optional: Run tests
