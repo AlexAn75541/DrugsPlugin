@@ -99,11 +99,11 @@ public enum Drug
             "Blue Sky type shit",
             new DrugType.PsychoActive(Sound.ENTITY_PLAYER_BURP,
                     List.of(
-                            new DrugEffect(PotionEffectType.LEVITATION, "gained a Blue Sky effect"),
-                            new DrugEffect(PotionEffectType.NAUSEA, "gained a nausea effect")
+                            new DrugEffect(PotionEffectType.LEVITATION, "gained a Blue Sky effect fr"),
+                            new DrugEffect(PotionEffectType.NAUSEA, "another effect too smh")
                     ),
                     List.of(
-                            new DrugEffect(PotionEffectType.BLINDNESS, "have become blind"),
+                            new DrugEffect(PotionEffectType.BLINDNESS, "have become blind and fucked up"),
                             new DrugEffect(PotionEffectType.SLOWNESS, "gained a speed reduction")
                     )
             ),
