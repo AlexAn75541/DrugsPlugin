@@ -76,11 +76,18 @@ public class PsychoactiveDrugListener implements Listener
         DrugType.PsychoActive drugType = (DrugType.PsychoActive) drug.getDrugType();
 
         player.playSound(player.getLocation(), drugType.getConsumeSound(), 10.f, (float) (1.7 + .2 * Math.random()));
-        player.addPotionEffect((new PotionEffect(drugType.getEffect().getEffectType(), 2400, 2)));
+        StringBuilder effectMessages = new StringBuilder();
+        for (DrugEffect effect : drugType.getEffects()) {
+            player.addPotionEffect((new PotionEffect(effect.getEffectType(), 2400, 2)));
+            effectMessages.append(effect.getMessage()).append(", ");
+        }
+        if (effectMessages.length() > 0) {
+            effectMessages.setLength(effectMessages.length() - 2); // Remove trailing ", "
+        }
         player.sendMessage(Objects.requireNonNull(messageConfig.getString("consumeStart"))
                 + drug.name()
                 + Objects.requireNonNull(messageConfig.getString("consumeMiddle"))
-                + drugType.getEffect().getMessage()
+                + effectMessages.toString()
                 + Objects.requireNonNull(messageConfig.getString("consumeEnd"))
         );
 
@@ -113,11 +120,18 @@ public class PsychoactiveDrugListener implements Listener
 
             if (player.isOnline()) {
                 player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_HURT, 10.f, 1.7f);
-                player.addPotionEffect((new PotionEffect(drugType.getWithdrawalEffect().getEffectType(), 600, 2)));
+                StringBuilder withdrawalMessages = new StringBuilder();
+                for (DrugEffect withdrawalEffect : drugType.getWithdrawalEffects()) {
+                    player.addPotionEffect((new PotionEffect(withdrawalEffect.getEffectType(), 600, 2)));
+                    withdrawalMessages.append(withdrawalEffect.getMessage()).append(", ");
+                }
+                if (withdrawalMessages.length() > 0) {
+                    withdrawalMessages.setLength(withdrawalMessages.length() - 2); // Remove trailing ", "
+                }
                 player.addPotionEffect((new PotionEffect(PotionEffectType.NAUSEA, 200, 3)));
                 player.sendMessage(Objects.requireNonNull(messageConfig.getString("dizzyMessage")));
                 player.sendMessage(Objects.requireNonNull(messageConfig.getString("withdrawalMessageStart"))
-                        + drugType.getWithdrawalEffect().getMessage()
+                        + withdrawalMessages.toString()
                         + Objects.requireNonNull(messageConfig.getString("withdrawalMessageEnd"))
                 );
                 player.removeMetadata(getPreviousDrugUsageKey(drug), DrugsPlugin.getInstance());

@@ -91,7 +91,8 @@ public enum Drug
             "health boost",
                     new DrugType.PsychoActive(Sound.ENTITY_PLAYER_BURP,
                     List.of(new DrugEffect(PotionEffectType.HEALTH_BOOST, "gained health boost")),
-                    List.of(new DrugEffect(PotionEffectType.POISON, "gained poison")))
+                    List.of(new DrugEffect(PotionEffectType.POISON, "gained poison"))),
+            new DrugRecipe.VerticalShaped(Material.RED_MUSHROOM, Material.BLAZE_POWDER, Material.BOWL)
             ),
     Methamphetamine(
             Material.SUGAR,
