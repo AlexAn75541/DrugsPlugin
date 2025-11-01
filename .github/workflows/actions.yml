@@ -3,7 +3,7 @@ name: Release with Auto-Changelog
 on:
   push:
     tags:
-      - 'v*'               # v1.0.0, v2.3.4, …
+      - 'v6.4-SNAPSHOT'               # v1.0.0, v2.3.4, …
 
 permissions:
   contents: write        # create release + upload assets
