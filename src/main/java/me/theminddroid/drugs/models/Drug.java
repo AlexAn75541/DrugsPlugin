@@ -20,7 +20,10 @@ public enum Drug
             Material.SUGAR,
             "speed",
             new DrugType.PsychoActive(Sound.ENTITY_PLAYER_BURP,
-                    List.of(new DrugEffect(PotionEffectType.SPEED, "gained a speed buff")),
+                    List.of(
+                        new DrugEffect(PotionEffectType.SPEED, "gained a speed buff"),
+                        new DrugEffect(PotionEffectType.NAUSEA, "and a nausea type buff idk")
+                    ),
                     List.of(new DrugEffect(PotionEffectType.SLOWNESS, "gained a speed reduction"))),
             new DrugRecipe.VerticalShaped(Material.SUGAR, Material.COCOA_BEANS, Material.PAPER)),
     Heroin(
@@ -99,8 +102,8 @@ public enum Drug
             "Blue Sky type shit",
             new DrugType.PsychoActive(Sound.ENTITY_PLAYER_BURP,
                     List.of(
-                            new DrugEffect(PotionEffectType.LEVITATION, "gained a Blue Sky effect fr"),
-                            new DrugEffect(PotionEffectType.NAUSEA, "another effect too smh")
+                            new DrugEffect(PotionEffectType.LEVITATION, "gained a Blue Sky effect"),
+                            new DrugEffect(PotionEffectType.NAUSEA, "and another effect too lmao")
                     ),
                     List.of(
                             new DrugEffect(PotionEffectType.BLINDNESS, "have become blind and fucked up"),
