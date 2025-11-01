@@ -1,6 +1,7 @@
 package me.theminddroid.drugs.listeners;
 
 import me.theminddroid.drugs.models.Drug;
+import me.theminddroid.drugs.models.DrugEffect;
 import me.theminddroid.drugs.models.DrugItems;
 import me.theminddroid.drugs.models.DrugType;
 import me.theminddroid.drugs.states.DrugUsageState;
