@@ -1,20 +1,21 @@
 package me.theminddroid.drugs.models;
 
 import org.bukkit.Sound;
+import java.util.List;
 
 public abstract class DrugType
 {
     public static class PsychoActive extends DrugType
     {
         private final Sound consumeSound;
-        private final DrugEffect effect;
-        private final DrugEffect withdrawalEffect;
+        private final List<DrugEffect> effects;
+        private final List<DrugEffect> withdrawalEffects;
 
-        public PsychoActive(Sound consumeSound, DrugEffect effect, DrugEffect withdrawalEffect)
+        public PsychoActive(Sound consumeSound, List<DrugEffect> effects, List<DrugEffect> withdrawalEffects)
         {
             this.consumeSound = consumeSound;
-            this.effect = effect;
-            this.withdrawalEffect = withdrawalEffect;
+            this.effects = effects;
+            this.withdrawalEffects = withdrawalEffects;
         }
 
         public Sound getConsumeSound()
@@ -22,14 +23,14 @@ public abstract class DrugType
             return consumeSound;
         }
 
-        public DrugEffect getEffect()
+        public List<DrugEffect> getEffects()
         {
-            return effect;
+            return effects;
         }
 
-        public DrugEffect getWithdrawalEffect()
+        public List<DrugEffect> getWithdrawalEffects()
         {
-            return withdrawalEffect;
+            return withdrawalEffects;
         }
     }
 
