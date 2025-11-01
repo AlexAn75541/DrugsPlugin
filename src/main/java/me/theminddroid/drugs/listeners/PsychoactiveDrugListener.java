@@ -114,7 +114,7 @@ public class PsychoactiveDrugListener implements Listener
             if (player.isOnline()) {
                 player.playSound(player.getLocation(), Sound.ENTITY_GENERIC_HURT, 10.f, 1.7f);
                 player.addPotionEffect((new PotionEffect(drugType.getWithdrawalEffect().getEffectType(), 600, 2)));
-                player.addPotionEffect((new PotionEffect(PotionEffectType.CONFUSION, 200, 3)));
+                player.addPotionEffect((new PotionEffect(PotionEffectType.NAUSEA, 200, 3)));
                 player.sendMessage(Objects.requireNonNull(messageConfig.getString("dizzyMessage")));
                 player.sendMessage(Objects.requireNonNull(messageConfig.getString("withdrawalMessageStart"))
                         + drugType.getWithdrawalEffect().getMessage()
