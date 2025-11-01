@@ -103,7 +103,7 @@ jobs:
         name: Snapshot ${{ github.ref_name }}
         body_path: changelog.md          # <-- clean markdown, no %0A
         draft: false
-        prerelease: true
+        prerelease: false
         files: ${{ steps.version.outputs.JAR }}   # <-- exact JAR path
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
