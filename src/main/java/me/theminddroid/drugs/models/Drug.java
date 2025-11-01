@@ -95,10 +95,13 @@ public enum Drug
             ),
     Methamphetamine(
             Material.SUGAR,
-            "Blue Sky - The purest of all",
+            "Blue Sky type shit",
             new DrugType.PsychoActive(Sound.ENTITY_PLAYER_BURP,
-                    new DrugEffect(PotionEffectType.LEVITATION, "gained a confusion effect"),
-                    new DrugEffect(PotionEffectType.WITHER, "are withering away")),
+                    new DrugEffect(PotionEffectType.LEVITATION, "gained a Blue Sky effect"),
+                    new DrugEffect(PotionEffectType.NAUSEA, "gained a Blue Sky effect"),
+                    new DrugEffect(PotionEffectType.SPEED, "gained a Blue Skyeffect"),
+                    new DrugEffect(PotionEffectType.NAUSEA, "gained a Blue Sky effect"),
+                    new DrugEffect(PotionEffectType.WITHER, "are being fucked up")),
             new DrugRecipe.VerticalShaped(Material.SUGAR, Material.REDSTONE, Material.GLASS_BOTTLE)
             );
 
