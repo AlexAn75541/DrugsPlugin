@@ -35,6 +35,8 @@ AyahuascaUse:
   enabled: true
 ShroomsUse:
   enabled: true
+MethamphetamineUse:
+  enabled: true
 
 # --------------------------------------------[DRUG RECIPE TOGGLE]-----------------------------------------------------
 
@@ -68,6 +70,8 @@ EcstasyRecipe:
 AyahuascaRecipe:
   enabled: true
 ShroomsRecipe:
+  enabled: true
+MethamphetamineRecipe:
   enabled: true
 
 # -------------------------------------------[TRANSLATION SECTION]-----------------------------------------------------

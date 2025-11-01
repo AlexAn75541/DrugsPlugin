@@ -92,6 +92,14 @@ public enum Drug
                     new DrugEffect(PotionEffectType.HEALTH_BOOST, "gained health boost"),
                     new DrugEffect(PotionEffectType.POISON, "gained poison")),
             new DrugRecipe.VerticalShaped(Material.RED_MUSHROOM, Material.BLAZE_POWDER, Material.BOWL)
+            ),
+    Methamphetamine(
+            Material.SUGAR,
+            "Blue Sky - The purest of all",
+            new DrugType.PsychoActive(Sound.ENTITY_PLAYER_BURP,
+                    new DrugEffect(PotionEffectType.LEVITATION, "gained a confusion effect"),
+                    new DrugEffect(PotionEffectType.WITHER, "are withering away")),
+            new DrugRecipe.VerticalShaped(Material.SUGAR, Material.REDSTONE, Material.GLASS_BOTTLE)
             );
 
     private static final Map<String, Drug> byDisplayName = new HashMap<>();
