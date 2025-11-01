@@ -3,11 +3,11 @@ name: CI + Snapshot Release
 
 on:
   push:
-    branches: [ main, develop ]          # adjust if you use other branches
+    branches: [ main ]          # adjust if you use other branches
     tags:
-      - 'v*'
+      - 'v6.4-SNAPSHOT'
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
 
 permissions:
   contents: write        # create release + upload assets
